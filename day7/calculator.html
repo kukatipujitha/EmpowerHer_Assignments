@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    body{
+        display:GRID;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color:white;
+        
+        
+    }
+    h1{
+        text-align: center;
+        color: rgb(15, 148, 145);
+    }
+    .calci{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        width: 600px;
+        height: 300px; 
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .calci div{
+        text-align: center;
+        justify-content:center;
+        background-color: white;
+        border-radius:2%;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    #c{
+        background-color: red;
+    }
+    #one{
+        height:50px;
+        background-color: black;
+        grid-column: span 4;
+    }
+    .calci .symbol{
+        background-color: rgb(9, 9, 9);
+        color: white
+    }
+</style>
+<body>
+    <h1>CALCULATOR</h1>
+    <div class="calci">
+        <div id="one"></div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="symbol">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="symbol">-</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="symbol">X</div>
+        <div id="c">C</div>
+        <div>0</div>
+        <div class="symbol">=</div>
+        <div class="symbol">/</div>
+
+    </div>
+</body>
+</html>
