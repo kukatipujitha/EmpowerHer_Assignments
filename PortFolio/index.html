@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pujitha — Portfolio</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Pujitha</div>
+
+      <button class="nav-toggle" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <h1>Hi, I’m <span class="accent">Pujitha</span></h1>
+      <p class="lead">Java Developer • Web Developer • ECE Student</p>
+      <a class="btn primary" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I am an Electronics & Communication undergraduate with strong skills in Java and Web Development. I enjoy building responsive UI, solving programming problems, and creating projects using pure HTML, CSS, and JavaScript.</p>
+        <p class="muted">ACME Club Coordinator • Python Programming Certificate • Anchoring Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">Java</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <h3>Hotel Reservation App</h3>
+          <p>A Java console project implementing OOP concepts like inheritance, polymorphism, and encapsulation.</p>
+          <p class="tags">Tech: Java, OOP</p>
+          <a class="btn ghost" href="#">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Task Manager (Web)</h3>
+          <p>A front-end task manager for adding, deleting, and saving tasks using vanilla JS + localStorage.</p>
+          <p class="tags">Tech: JavaScript, HTML, CSS</p>
+          <a class="btn ghost" href="#">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Responsive Portfolio</h3>
+          <p>Fully responsive portfolio built with pure HTML & CSS. No frameworks used.</p>
+          <p class="tags">Tech: HTML, CSS</p>
+          <a class="btn ghost" href="#">View Project</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-list">
+        <div class="edu-card">
+          <h3>B.Tech — ECE</h3>
+          <p class="muted">Your College • 2021 – Present</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>Higher Secondary</h3>
+          <p class="muted">Your School • 2019 – 2021</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>Python Programming Certification</h3>
+          <p class="muted">Pearson • 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+
+        <form class="contact-form">
+          <label>Name
+            <input type="text" required>
+          </label>
+
+          <label>Email
+            <input type="email" required>
+          </label>
+
+          <label>Message
+            <textarea rows="5" required></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <p class="muted">Email: your.email@gmail.com</p>
+          <p class="muted">LinkedIn: linkedin.com/in/yourprofile</p>
+          <p class="muted">GitHub: github.com/yourusername</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Pujitha. All Rights Reserved.</p>
+      <div class="social">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.getElementById("navToggle");
+    const nav = document.getElementById("siteNav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
