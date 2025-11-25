@@ -1,6 +1,9 @@
 function processStudents (students){
     const studentMarks= students.filter(student => student.marks>60);
-    return studentMarks;
+    const sorted=studentMarks.sort((a,b)=> b.marks -a.marks);
+    const finalList=sorted.map(student => student.name)
+    return finalList;
+
 }
 let students1=[
   { "name": "Alice", "marks": 58 },
