@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    //html 
+
     <input id="color" type="text" placeholder="enter the color"> 
     <input id="text" type="text" placeholder="enter the text"> 
     <button  id="Button1" type="submit">Change Background</button>
@@ -19,12 +19,13 @@
     const colorInput=document.querySelector("#color");
     const textInput=document.querySelector("#text");
     const box=document.querySelector("#originalText");
+    //to chnage the background color
     document.querySelector("#Button1").addEventListener("click", () =>{
         const color=colorInput.value.trim();
-        const tester=document.createElement("div");
+        const tester=document.createElement("div");  // tests the input color as a valid or not
         tester.style.color=color;
 
-        if(tester.style.color===""){
+        if(tester.style.color===""){    // if color is empty
             alert("invalid color name!");
         }
         else{
@@ -32,8 +33,9 @@
         }
         
     });
+    //to chnage the text 
     document.querySelector("#button2").addEventListener("click",()=>{
-        if(textInput.value===""){
+        if(textInput.value===""){    // if text is empty
             alert("Please enter some text!");
         }
         else{

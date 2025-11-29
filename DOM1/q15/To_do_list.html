@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .completed{
+        text-decoration: line-through;
+        color: gray;
+    }
+</style>
+<body>
+    <input id="taskInput" type="text" placeholder="enter your task">
+    <button id="addbtn" type="submit"> Add task</button>
+    <ul id="taskList"> </ul>
+<script>
+    const input=document.querySelector("#taskInput");
+    const addbtn=document.querySelector("#addbtn");
+    const list=document.querySelector("#taskList");
+    //add task
+    addbtn.addEventListener("click",()=>{
+        const text=input.value.trim();
+        if (text===""){
+            alert("task cannot be empty!");
+            return;
+        }
+        const li=document.createElement("li");
+        li.textContent=text;
+        const completeBtn=document.createElement("button");
+        completeBtn.textContent="complete";
+        completeBtn.style.marginLeft="10px";
+        completeBtn.addEventListener("click",()=>{
+            li.classList.toggle("completed");
+        });
+        
+        const deleteBtn=document.createElement("button");
+        deleteBtn.textContent="delete";
+        deleteBtn.style.marginLeft="10px";
+        deleteBtn.addEventListener("click",()=>{
+            li.remove();
+        });
+        li.appendChild(completeBtn);
+        li.appendChild(deleteBtn);
+        list.appendChild(li);
+        input.value="";
+        
+    })
+
+
+
+
+</script>
+
+    
+</body>
+</html>
