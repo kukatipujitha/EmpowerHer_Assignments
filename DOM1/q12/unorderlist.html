@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li> Event loops</li>
+        <li> closures</li>
+        <li> Dom </li>
+    </ul>
+    <button type="submit" onclick="addItem()"> Add item </button>
+</body>
+</html>
+<script>
+    function addItem(){
+        const OldList=document.querySelector("#list");
+        const newItem=document.createElement("li");
+        newItem.textContent="New Item";
+        OldList.appendChild(newItem);
+        //added new item
+        // finding the position of newly added item
+        const items=OldList.getElementsByTagName("li");
+        const index=items.length;
+        if( index%2!==0){
+            newItem.style.fontWeight="bold";
+            newItem.style.color="blue";
+        }
+        else {
+            newItem.style.fontStyle="italic";
+            newItem.style.color="red";
+
+        }
+        
+         
+    }
+    
+</script>
