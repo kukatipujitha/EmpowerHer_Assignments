@@ -1,0 +1,64 @@
+*{
+   background-color: blue; 
+}
+.container{
+    display: grid;
+    background-color: #f3de21;
+    text-decoration-color: azure;
+    padding: 10px;
+        gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+    /* grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px; */
+    /* grid-auto-rows: 10px;
+    grid-auto-flow: column; */
+    grid-template-areas: header header header
+                         nav    main   ads
+                         footer footer footer;
+    
+    /* justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+}
+.box1{
+    
+    background-color: rgb(30, 0, 255);
+    padding: 20px;
+}
+.box2{
+    
+    background-color: rgb(32, 0, 128);
+    padding: 10px;
+}
+.box3{
+    background-color: yellow;
+    padding: 30px;
+}
+.box4{
+   
+    background-color: orange;
+    padding: 15px;
+}
+.box5{
+   
+    background-color: purple;
+    padding: 25px;
+}
+.box6{
+    background-color: pink;
+    padding: 5px;
+}
+.box7{
+    background-color: brown;
+    padding: 12px;
+}
+.box8{
+    background-color: gray;
+    padding: 18px;
+}
+.box9{
+    background-color: black;
+    padding: 22px;
+    
+}

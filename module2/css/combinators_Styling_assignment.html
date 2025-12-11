@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Example</title>
+    <style>
+        /* === 1. Navigation Bar === */
+        nav {
+            background-color: #0066cc;
+            padding: 10px;
+        }
+
+        /* Child combinator: only direct <li> children inside <ul> */
+        nav > ul > li {
+            display: inline;
+            margin-right: 15px;
+            border-bottom: 2px solid yellow;
+        }
+
+        /* Remove list bullets and spacing */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Style links */
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* === 2. Adjacent Sibling Combinator === */
+        /* Target <h2> immediately after <nav> */
+        nav + h2 {
+            color: darkblue;
+            font-size: 24px;
+        }
+
+        /* === 3. General Sibling Combinator === */
+        /* Style all <p> that are siblings of <h3> inside <article> */
+        article h3 ~ p {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* === General Page Styling === */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        main {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. Main Content -->
+    <h2>Main Content Section</h2>
+
+    <main>
+        <article>
+            <h3>Article 1</h3>
+            <p>This is the first article describing some interesting topic.</p>
+        </article>
+
+        <article>
+            <h3>Article 2</h3>
+            <p>This is the second article giving more detailed information.</p>
+        </article>
+    </main>
+
+</body>
+</html>

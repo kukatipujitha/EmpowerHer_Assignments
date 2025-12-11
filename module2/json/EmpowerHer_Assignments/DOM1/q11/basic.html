@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="oldText">   welcome </h1>
+    <p>The sun peeked through the clouds as a gentle breeze swept across the field. Birds chirped softly, adding a calm rhythm to the morning air. Everything felt peaceful, as if the world had paused just to enjoy the moment.</p>
+    <p>A soft rain began to fall, creating tiny ripples across the puddles on the road. The fresh smell of the earth filled the air as people hurried by with umbrellas. Despite the gloom, there was something comforting about the quiet rhythm of the rain.</p>
+    <div class="container">  masai school</div>
+</body>
+<script>
+    const heading=document.getElementById("oldText")
+    heading.textContent="Welcome to the DOM World!";
+    const para=document.getElementsByTagName("p");
+    Array.from(para).forEach(p =>{
+        p.style.color="blue";
+    });
+    const division=document.querySelector(".container");
+    division.style.backgroundColor="yellow";
+
+</script>
+</html>

@@ -1,0 +1,12 @@
+div{
+    border:20px solid red;
+    margin:20px;
+    position:sticky;
+
+}
+.box{
+    border:20px solid rgb(55, 0, 255);
+    margin:20px;
+    position:sticky
+
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza website </title>
+    <style>
+        body{
+            grid-auto-flow: inherit;
+        }
+        .container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            padding-left: 15%;
+            padding-top: 2%;
+        }
+
+        .container :nth-child(1) {
+            color: navy;
+            size: 10px;
+            font-weight: bold;
+        }
+
+        nav button {
+            background-color: red;
+            color: white;
+        }
+        .one{
+            display:grid;
+            gap:20px;
+            grid-template-columns:repeat(3,1fr);
+            padding: 40px;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            justify-content: center;
+            background-color: red;
+            align-items: center;
+            color:white;
+            text-align: center;
+        }
+        .card img{
+            object-fit:10px;
+            padding:50%,50% 50%;
+            width:30%;
+            
+            border-radius: 10px;
+            background-color: white;
+
+        }
+        .card p{
+            font-size: medium;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+            line-height: 22px;
+            ;
+        }
+        .card strong{
+            color: white;
+        }
+        .card button{
+        background-color: white;
+        color: red;
+        align-self: center;
+        }
+        .explore{
+            display:grid;
+            gap:5%;
+            grid-template-columns:repeat(4,1fr);
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        .exploreCard{
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(42, 12, 103, 0.1);
+            width: 120%;
+            padding: 100%,100%;
+            
+
+        }
+        .exploreText{
+            color: red;
+            text-align: center;
+
+        }
+        .exploreCard p{
+            padding-left: 2%;
+
+        }
+        .exploreCard>div{
+            align-content: center;
+
+        }
+        main h2{
+            padding-left: 5%;
+        }
+        section h2{
+            padding-left: 10%;
+        }
+        .bottom{
+            background-color:lightgrey;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        footer{
+            background-color: aliceblue;
+        }
+        .card2{
+            padding-left: 15%;
+            align-items: start;
+        }
+        .bottom img{
+            width: 80%;
+            padding-bottom: 0%;
+        }
+        @media (max-width:600px){
+            .explore{
+                flex-direction:column;
+                gap:20px;
+            }
+            .bottom{
+                flex-direction:column;
+                gap:20px;
+            }
+            .container{
+                flex-direction:column;
+                gap:20px;
+            }
+        }
+        #card2 img{
+            width: 20%;
+            height:20%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div> Domino's Pizza </div>
+            <div> OUR MENU </div>
+            <DIV> DOMINO'S STORES </DIV>
+            <DIV> GIFT CARD</DIV>
+            <DIV> CORPORATE ENQUIRY</DIV>
+            <DIV> CONTACT</DIV>
+            <DIV>
+                <BUTTON> Download App</BUTTON>
+            </DIV>
+        </div>
+    </nav>
+    <main>
+        <h2>Order</h2>
+        <div class="one">
+            <div class="card">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                    alt="VEG Pizza">
+                    <Strong>VEG PIZZA</Strong>
+                
+                    <p>A delighted for veggies lovers! choose from our wide range of delicious vegetarian
+                    pizzas, it's softer and tastier </p>
+
+                        <button> VIEW ALL</button>
+               
+
+            </div>
+           <div class="card">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                    alt="VEG Pizza">
+                    <Strong>VEG PIZZA</Strong>
+                
+                    <p>A delighted for veggies lovers! choose from our wide range of delicious vegetarian
+                    pizzas, it's softer and tastier </p>
+
+                        <button> VIEW ALL</button>
+               
+
+            </div>
+            <div class="card">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                    alt="VEG Pizza">
+                    <Strong>VEG PIZZA</Strong>
+                
+                    <p>A delighted for veggies lovers! choose from our wide range of delicious vegetarian
+                    pizzas, it's softer and tastier </p>
+
+                        <button> VIEW ALL</button>
+               
+
+            </div>
+            <div class="card">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                    alt="VEG Pizza">
+                    <Strong>VEG PIZZA</Strong>
+                
+                    <p>A delighted for veggies lovers! choose from our wide range of delicious vegetarian
+                    pizzas, it's softer and tastier </p>
+
+                        <button> VIEW ALL</button>
+               
+
+            </div>
+            <div class="card">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                    alt="VEG Pizza">
+                    <Strong>VEG PIZZA</Strong>
+                
+                    <p>A delighted for veggies lovers! choose from our wide range of delicious vegetarian
+                    pizzas, it's softer and tastier </p>
+
+                        <button> VIEW ALL</button>
+               
+
+            </div>
+            <div class="card">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png"
+                    alt="VEG Pizza">
+                    <Strong>VEG PIZZA</Strong>
+                
+                    <p>A delighted for veggies lovers! choose from our wide range of delicious vegetarian
+                    pizzas, it's softer and tastier </p>
+
+                        <button> VIEW ALL</button>
+               
+
+            </div>
+
+        </div>
+    </main>
+    <br><br>
+    <section>
+         <h2>Explore</h2>
+        <div class="explore">
+           
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3>DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3> DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3> DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3> DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3> DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3>DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3>DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            <div class="exploreCard">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="MENU">
+                <h3>OUR MENU</h3>
+                <P>Explore our range of delicious Pizzas,delivered in 30 minutes</P>
+                
+                <div class="exploreText">
+                    <hr>
+                    <h3>DISCOVER PIZZA</h3>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </section>
+    <br>
+    <br>
+    <br><br>
+    <footer>
+        <div class="bottom">
+            <div id="card1">
+               <img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/48f2fc25-38f4-4d25-a878-78f15988b371/kXSpyg2iCHrCEljP.png" alt=" phone">
+            </div>
+            <div id="card2">
+                <h1> Unlock Exclusive Offers</h1>
+                <p>For lightning fast ordering experience download the Domino's app</p>
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png" alt="playstore">
+                <br>
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png" alt="google">
+            </div>
+    </footer>
+</body>
+
+</html>

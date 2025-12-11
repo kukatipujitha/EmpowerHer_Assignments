@@ -1,0 +1,11 @@
+body{
+background-color: red;
+}
+h1{
+font-size: yellow;
+font-style: italic;
+}
+p{
+   border-color: blue;
+   border-style: dashed;
+}

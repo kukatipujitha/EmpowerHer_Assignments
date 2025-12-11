@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="color" type="text" placeholder="enter the color"> 
+    <input id="text" type="text" placeholder="enter the text"> 
+    <button  id="Button1" type="submit">Change Background</button>
+    <button type="submit" id="button2">update text</button>
+    <div id="originalText"> interactive web page</div>
+
+
+</body>
+<script>
+    const colorInput=document.querySelector("#color");
+    const textInput=document.querySelector("#text");
+    const box=document.querySelector("#originalText");
+    //to chnage the background color
+    document.querySelector("#Button1").addEventListener("click", () =>{
+        const color=colorInput.value.trim();
+        const tester=document.createElement("div");  // tests the input color as a valid or not
+        tester.style.color=color;
+
+        if(tester.style.color===""){    // if color is empty
+            alert("invalid color name!");
+        }
+        else{
+            originalText.style.backgroundColor=color;
+        }
+        
+    });
+    //to chnage the text 
+    document.querySelector("#button2").addEventListener("click",()=>{
+        if(textInput.value===""){    // if text is empty
+            alert("Please enter some text!");
+        }
+        else{
+            originalText.textContent=textInput.value;
+        }
+    });
+        
+
+
+    
+</script>
+</html>

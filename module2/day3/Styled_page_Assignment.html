@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+            font-size: medium;
+
+        }
+        header{
+            font-family: 'Times New Roman', Times, serif;
+            border: solid;
+            border-color: black;
+            padding: 5px;
+            text-align: center;
+        }
+        img{
+            border-radius: 50%;
+            box-shadow:0cqmax;
+            width: 400px;
+        }
+        tr:nth-child(even){
+            background-color:lightcoral;
+ 
+        }
+        tr:nth-child(odd){
+            background-color: aqua;
+        }
+        td:nth-child(1) {
+            border-color: blue;
+        }
+        td:nth-child(2) {
+            border-color: rgb(255, 0, 0);
+        }
+        td:nth-child(3) {
+            border-color: rgb(255, 170, 0);
+        }
+        button{
+            background-color: blue;
+            text-decoration-color: aqua;
+            padding:0%
+        }
+        
+        button:hover{
+            background-color: aliceblue;
+        }
+        p{
+            text-align: justify;
+            color: blueviolet;
+            border-color: blue;
+            border-style: solid;
+            border:2px;
+        }
+        footer{
+            background-color: chartreuse;
+            font-size:x-small;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <nav>
+        <a href="#">home</a><br>
+        <a href="#">About</a><br>
+        <a href="#">contact</a><br>
+    </nav>
+    <header>
+        <h1 style="background-color: lightgray; color: darkblue; font-size: 40px;">Welcome to my Webpage</h1>
+        <h2 style="font-weight: bold; color: green; font-size: 28px;">Learning Web Development</h2>
+        </header>
+        <main>
+        <img src="https://www.nexel.in/media/blog_images/web_development_Z62jy4k.jpg" alt="flower">
+        <table border="1" style="border-collapse:initial;" >
+            <tr>
+                <th>
+                    name
+                </th>
+                <th>
+                    roll number
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    pujitha
+                </td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>ramya</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>vyshu</td>
+                <td>54</td>
+            </tr>
+        </table>
+        <br><br>
+        <button>Learn More</button><br><br>
+        <p>Web development is the process of building, creating, and maintaining websites and web applications. It involves a wide range of tasks, including front-end (what users see) and back-end (server-side logic) development, web design, and database management. Common technologies used include HTML, CSS, and JavaScript for the front-end, and languages like Python or PHP for the back-end. </p>
+     <form action="submit">
+        <label for="name">name:</label>
+        <input type="text"><br><br>
+        <label for="email">email:</label>
+        <input type="email">
+        <button style="background-color: blue;">submit</button>
+     </form>
+     </main>
+     <footer>
+        <p>© 2025 pujitha. All rights reserved.</p>
+     </footer>
+    
+   
+</body>
+</html>

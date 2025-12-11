@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Cards</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 cards in one row */
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 300px;   /* fixed width */
+      height: 320px;  /* fixed height */
+      box-sizing: border-box;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card.red {
+      background-color: #d7194a;
+      color: white;
+    }
+
+    .card img {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 10px;
+    }
+
+    .card h4 {
+      margin: 5px 0;
+      font-size: 15px;
+      color: #666;
+    }
+
+    .card.red h4 {
+      color: #f3f3f3;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 3px 0;
+      color: #333;
+    }
+
+    .card.red p {
+      color: white;
+    }
+
+    .duration, .mode {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .card.red .duration, 
+    .card.red .mode {
+      color: white;
+    }
+
+    .divider {
+      display: inline-block;
+      width: 1px;
+      height: 14px;
+      background-color: #d7194a; /* red vertical line */
+      margin: 0 8px;
+      vertical-align: middle;
+    }
+
+    .card.red .divider {
+      background-color: white;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      padding: 8px 0;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .btn.learn {
+      background-color: #d7194a;
+      color: white;
+    }
+
+    .btn.brochure {
+      border: 2px solid #d7194a;
+      color: #d7194a;
+      background: transparent;
+    }
+
+    .card.red .btn.learn {
+      background-color: white;
+      color: #d7194a;
+    }
+
+    .card.red .btn.brochure {
+      border-color: white;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/58/IIM_Sirmaur_Logo.png" alt="IIM Sirmaur">
+      <h4>IIM Sirmaur</h4>
+      <h3>EDGE: Essentials of Data Analytics, Gen AI & Execution</h3>
+      <p>
+        <span class="duration">06 months</span>
+        <span class="divider"></span>
+        <span class="mode">Online</span>
+      </p>
+      <p><b>Qualifier test - 12th Nov 2025</b></p>
+      <div class="buttons">
+        <a href="#" class="btn learn">Learn more →</a>
+        <a href="#" class="btn brochure">Brochure →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/IIT_Patna_Logo.png" alt="IIT Patna">
+      <h4>Vishlesan i-Hub IIT Patna</h4>
+      <h3>Product Management and Agentic AI</h3>
+      <p>
+        <span class="duration">06 months</span>
+        <span class="divider"></span>
+        <span class="mode">Online</span>
+      </p>
+      <p><b>Qualifier test - 12th Nov 2025</b></p>
+      <div class="buttons">
+        <a href="#" class="btn learn">Learn more →</a>
+        <a href="#" class="btn brochure">Brochure →</a>
+      </div>
+    </div>
+
+    <div class="card red">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/IIT_Patna_Logo.png" alt="IIT Patna">
+      <h4>Vishlesan i-Hub IIT Patna</h4>
+      <h3>Certification Program in Data Analytics with Gen & Agentic AI</h3>
+      <p>
+        <span class="duration">06 months</span>
+        <span class="divider"></span>
+        <span class="mode">Online</span>
+      </p>
+      <p><b>Qualifier test - 9th Nov 2025</b></p>
+      <div class="buttons">
+        <a href="#" class="btn learn">Learn more →</a>
+        <a href="#" class="btn brochure">Brochure →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/IIM_Trichy_Logo.png" alt="IIM Trichy">
+      <h4>IIM Trichy</h4>
+      <h3>Product Management in the Agentic AI Era</h3>
+      <p>
+        <span class="duration">06 months</span>
+        <span class="divider"></span>
+        <span class="mode">Online</span>
+      </p>
+      <p><b>Qualifier test - 12th Nov 2025</b></p>
+      <div class="buttons">
+        <a href="#" class="btn learn">Learn more →</a>
+        <a href="#" class="btn brochure">Brochure →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/IIT_Roorkee_Logo.png" alt="IIT Roorkee">
+      <h4>iHUB DivyaSampark, IIT Roorkee</h4>
+      <h3>Future-Ready Product Management with Applied AI Program</h3>
+      <p>
+        <span class="duration">06 months</span>
+        <span class="divider"></span>
+        <span class="mode">Online</span>
+      </p>
+      <p><b>Qualifier test - 12th Nov 2025</b></p>
+      <div class="buttons">
+        <a href="#" class="btn learn">Learn more →</a>
+        <a href="#" class="btn brochure">Brochure →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/NMIMS_University_Logo.png" alt="NMIMS CDOE">
+      <h4>NMIMS CDOE</h4>
+      <h3>Online MBA</h3>
+      <p>
+        <span class="duration">02 Years</span>
+        <span class="divider"></span>
+        <span class="mode">Online</span>
+      </p>
+      <p><b>Qualifier test - 12th Nov 2025</b></p>
+      <div class="buttons">
+        <a href="#" class="btn learn">Learn more →</a>
+        <a href="#" class="btn brochure">Brochure →</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        grid-template-rows: repeat(3, 400px);
+        height: 400px;
+        gap: 2px;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .card:first-child {
+        background-color: orangered;
+    }
+
+    .card:nth-child(2) {
+        background-color: navy;
+    }
+
+    .card:nth-child(3) {
+        background-color: yellow;
+    }
+
+    .card:nth-child(4) {
+        background-color: rgb(98, 13, 167);
+    }
+
+    .card:nth-child(5) {
+        background-color: green;
+    }
+
+    .card:nth-child(6) {
+        background-color: skyblue;
+    }
+
+    .card:nth-child(7) {
+        background-color: lightcoral;
+    }
+
+    .card:nth-child(8) {
+        background-color: rgb(25, 185, 203);
+    }
+
+    .card:nth-child(9) {
+        background-color: brown;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card"> 2.</div>
+        <div class="card"> 3.</div>
+        <div class="card"> 4.</div>
+        <div class="card"> 5.</div>
+        <div class="card"> 6.</div>
+        <div class="card"> 1.</div>
+        <div class="card"> 7.</div>
+        <div class="card"> 8.</div>
+        <div class="card"> 9.</div>
+    </div>
+</body>
+
+</html>

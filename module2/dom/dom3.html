@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>hii</button>
+    <button>hello</button>
+    <button id="me" onclick="changeAll()">bye</button>
+
+</body>
+<script>
+    function changeAll(){
+        let buttons=document.getElementsByTagName("button");
+        for(let i of buttons){
+            i.style.backgroundColor="blue";
+        }
+    }
+</script>
+</html>

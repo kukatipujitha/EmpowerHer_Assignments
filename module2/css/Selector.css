@@ -1,0 +1,28 @@
+*{
+  background-color: bisque;  
+  font-family: cursive;
+}
+.p1{
+    background-color: #6b9933;
+    border-radius: 0cqmax;
+    border-style: dashed;
+}
+.p2{
+    background-color: rgb(255, 0, 136);
+    border-style: dashed;
+    border-radius: 0cqmax;
+
+}
+.b1{
+    background-color: blue;
+    border-style: dashed;
+    border-radius: 0cqmax;
+}
+.b2{
+    background-color: blue;
+    border-style: dashed;
+    border-radius: 0cqmax;
+}
+.btn:hover{
+scrollbar-color: calc(bisque);
+}

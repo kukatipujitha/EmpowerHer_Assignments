@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly schedule</title>
+</head>
+<style>
+    .card {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        gap: 10px;
+
+    }
+    h2{
+        font-family: cursive;
+        color: aqua;
+        text-align: center;
+        font-size: xx-large
+    }
+    .card div{
+        border: 1px solid gray;
+        padding: 8px;
+        text-align: center;
+        border-radius: 10%;
+    }
+    .card div:first-child{
+        visibility: hidden;
+    }
+    .card div:nth-child(odd){
+        background-color: yellow;
+    }
+    .card div:nth-child(6n+1){
+        background-color:skyblue;
+    }
+    .card div:nth-child(2n){
+        background-color: pink;
+    }
+    #one{
+        grid-column: span 6;
+    }
+
+    
+</style>
+
+<body>
+    <h2> ✨Weekly schedule✨</h2>
+        <div class="card">
+
+
+            <div> empty</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+
+            <div>08:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>09:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>10:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>11:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>12:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>13:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>14:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>15:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>16:00</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div id="one"> Note:</div>
+    </div>
+</body>
+
+</html>
