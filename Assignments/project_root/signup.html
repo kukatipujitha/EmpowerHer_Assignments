@@ -1,0 +1,84 @@
+<!-- signup.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Signup - MyApp</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <main style="padding:16px;max-width:640px;margin:0 auto">
+    <h2>Signup</h2>
+    <form id="signupForm">
+      <div>
+        <label>Name<br /><input required name="name" /></label>
+      </div>
+      <div>
+        <label>Email<br /><input required name="email" type="email" /></label>
+      </div>
+      <div>
+        <label>Password<br /><input required name="password" type="password" /></label>
+      </div>
+      <div style="margin-top:12px">
+        <button type="submit">Create account</button>
+      </div>
+      <p id="msg" style="color:green"></p>
+    </form>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { createNavbar } from './components/navbar.js';
+    import { createFooter } from './components/footer.js';
+
+    document.getElementById('nav-root').appendChild(createNavbar());
+    document.getElementById('footer-root').appendChild(createFooter());
+
+    const form = document.getElementById('signupForm');
+    const msg = document.getElementById('msg');
+
+    function getUsers() {
+      try {
+        return JSON.parse(localStorage.getItem('users') || '[]');
+      } catch {
+        return [];
+      }
+    }
+
+    function saveUsers(users) {
+      localStorage.setItem('users', JSON.stringify(users));
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const name = fd.get('name').trim();
+      const email = fd.get('email').trim().toLowerCase();
+      const password = fd.get('password');
+
+      if (!name || !email || !password) {
+        msg.style.color = 'red';
+        msg.textContent = 'Please fill all fields.';
+        return;
+      }
+
+      const users = getUsers();
+      if (users.find(u => u.email === email)) {
+        msg.style.color = 'red';
+        msg.textContent = 'A user with this email already exists.';
+        return;
+      }
+
+      users.push({ name, email, password });
+      saveUsers(users);
+      msg.style.color = 'green';
+      msg.textContent = 'Account created. Redirecting to login...';
+      setTimeout(() => { window.location.href = 'login.html'; }, 900);
+    });
+  </script>
+</body>
+</html>

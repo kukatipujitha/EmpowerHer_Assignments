@@ -1,0 +1,58 @@
+<!-- todos.html -->
+<!doctype html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8" />
+  <title>Todos - MyApp</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <main style="padding:16px;max-width:900px;margin:0 auto">
+    <h2>Todos</h2>
+    <div id="todos-status">Loading...</div>
+    <div id="todos-container" style="margin-top:12px;"></div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    // import { createNavbar } from './components/navbar.js';
+    // import { createFooter } from './components/footer.js';
+    // import { displayTodos } from './modules/displayTodos.js';
+
+    document.getElementById('nav-root').appendChild(createNavbar());
+    document.getElementById('footer-root').appendChild(createFooter());
+
+    // Protect the page: require logged-in user
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+      // redirect to login if not authenticated
+      window.location.href = 'login.html';
+      throw new Error('Redirecting to login');
+    }
+
+    const statusEl = document.getElementById('todos-status');
+    const container = document.getElementById('todos-container');
+
+    async function fetchAndRender() {
+      statusEl.textContent = 'Fetching todos...';
+      try {
+        const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+        if (!res.ok) throw new Error('Failed to fetch todos: ' + res.status);
+        const data = await res.json();
+        // For demo: we can limit to first 50 items to keep UI clean
+        const limited = Array.isArray(data) ? data.slice(0, 50) : data;
+        statusEl.textContent = `Showing ${limited.length} todos (fetched from API)`;
+        displayTodos(limited, container);
+      } catch (err) {
+        statusEl.textContent = 'Error loading todos.';
+        container.innerHTML = `<pre style="color:red">${err.message}</pre>`;
+      }
+    }
+
+    fetchAndRender();
+  </script>
+</body>
+</html>
